@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    
+
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+</head>
+<body>
+
+<!-- TOP -->
+<div id="top">
+    <div class="titlesTop">
+        <p>Designed to Be Remembered</p>
+    </div>
+    <div class="titleBrand">
+        <p>CARAT</p>
+    </div> 
+</div>
+
+<!-- IMAGES -->
+<div id="images">
+    <div class="image12"><img src="image1.jpeg" alt="Product 1"></div>
+    <div class="image12"><img src="image2.jpeg" alt="Product 2"></div>
+
+    <!-- SHOP BUTTON -->
+    <div id="centerButton">
+        <div id="butShop" class="shopContainer">
+            <button onclick="openMenu()" class="shopBtn">
+                <span class="btnLayer btnLayer1"></span>
+                <span class="btnLayer btnLayer2"></span>
+                <span class="btnText">Shop Now</span>
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- FULLSCREEN MENU -->
+<div id="fullMenu">
+    <div class="closeBtn" onclick="closeMenu()">✕</div>
+
+    <div class="menuLinks">
+
+        <!-- JEWELRY -->
+        <div class="menuItem">
+            <div class="menuTitle" onclick="toggleMenu(this)">JEWELRY</div>
+            <div class="subMenu">
+                <a href="JEaring.html">Earrings</a>
+                <a href="#">Necklaces</a>
+                <a href="#">Rings</a>
+                <a href="#">Bracelets</a>
+            </div>
+        </div>
+
+        <!-- ACCESSORIES -->
+        <div class="menuItem">
+            <div class="menuTitle" onclick="toggleMenu(this)">ACCESSORIES</div>
+            <div class="subMenu">
+                <a href="#">Watches</a>
+                <a href="#">Bags</a>
+                <a href="#">Sunglasses</a>
+            </div>
+        </div>
+
+        <!-- SIMPLE LINKS -->
+        <div class="menuItem">
+            <div class="menuTitle"><a href="#" style="text-decoration:none;color:white;">FAVORITES</a></div>
+        </div>
+
+        <div class="menuItem">
+            <div class="menuTitle"><a href="#" style="text-decoration:none;color:white;">CART</a></div>
+        </div>
+
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2026 CARAT. All Rights Reserved.</p>
+</footer>
+
+<script>
+function openMenu() {
+    document.getElementById("fullMenu").classList.add("active");
+}
+
+function closeMenu() {
+    document.getElementById("fullMenu").classList.remove("active");
+}
+
+function toggleMenu(element) {
+    let parent = element.parentElement;
+
+    // Close other submenus
+    document.querySelectorAll(".menuItem").forEach(item => {
+        if (item !== parent) item.classList.remove("active");
+    });
+
+    parent.classList.toggle("active");
+}
+</script>
+
+</body>
+</html>
